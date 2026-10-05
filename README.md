@@ -11,7 +11,7 @@
 
 ## 一键导入
 
-点击下方链接（手机需已安装 Quantumult X），QX 将自动拉起并导入本配置：
+点击下方链接（手机需已安装 Quantumult X），QX 将自动拉起并导入本配置（去广告规则开箱即用，仅需再填订阅与证书）：
 
 **[📲 一键导入 Quantumult X 配置](quantumult-x:///update-configuration?remote-resource=https%3A%2F%2Fraw.githubusercontent.com%2Fchengaiying99-cmd%2Fqx-personal-config%2Fmain%2Fquantumultx.conf)**
 
@@ -78,15 +78,16 @@ https://raw.githubusercontent.com/chengaiying99-cmd/qx-personal-config/main/quan
 
 ## 使用方法
 
-### 1. 替换占位符（共 5 处）
+### 1. 替换占位符（共 3 处）
 
 | 占位符 | 位置 | 替换为 |
 |---|---|---|
 | `YOUR_AIRPORT_SUBSCRIPTION_URL` | `[server_remote]`（注释状态） | 你的机场 **HTTPS** 订阅地址，替换后取消该行注释 |
 | `YOUR_CERTIFICATE_PASSWORD` | `[mitm]`（注释状态） | MITM 证书口令 |
 | `YOUR_P12_CERTIFICATE_CONTENT` | `[mitm]`（注释状态） | p12 证书 Base64 内容 |
-| `YOUR_GITHUB_USERNAME` × 2 | `[filter_remote]` / `[rewrite_remote]` | fork 红果规则仓库后填你的用户名；不改则删除这两条（其余规则不受影响） |
 
+> 说明：红果去广告等订阅规则地址已填入真实值（指向本账号仓库，SHA 锁版），导入后即可正常拉取，无需修改。
+>
 > ⚠️ p12 证书与口令**不要经聊天/IM 传输**（会破坏 ASN.1 结构导致证书失效）。推荐在手机 QX 现用配置的 `[mitm]` 段直接复制这两行。
 
 ### 2. App 内一次性设置（必做）
