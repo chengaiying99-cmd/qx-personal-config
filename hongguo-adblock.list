@@ -1,9 +1,4 @@
-# 红果短剧/番茄小说 广告域名拦截清单
-# 主要来源：abclq/home-dns-adblock（字节系广告 API 精准枚举，白名单已剔除）
-# 补充来源：biu1biu/qx-rules v2.2（commit b18a8b8，作者已删仓库，规则自 Git 历史取回）
-#          —— 实抓 HAR 得到的广告曝光/归因上报域，其中 media-show.wanzi.com 为原清单遗漏
-# 用法：Quantumult X → 分流(Filter) 远程资源引用本文件，force-policy 指向广告拦截组
-# 更新：2026-10-06 · 199 条
+# Honguo/Fanqie ad domains (199). Source: abclq/home-dns-adblock (MIT) + biu1biu/qx-rules v2.2. LF only.
 host, activity-ag.awemeughun.com, reject
 host, ad.toutiao.com, reject
 host, ads0-normal-gr.zijieapi.com, reject
