@@ -28,9 +28,9 @@ https://raw.githubusercontent.com/chengaiying99-cmd/qx-personal-config/main/quan
 - **四层十一段架构**：general / dns / policy / 节点 / 分流 / 重写 / 任务 / MITM 共 12 段完整
 - **三层五组策略体系**：3 个节点引擎组（⚡ 自动优选 / 🧠 AI 固定 / 🌐 IPv6 通道）+ 国外 7 组 + 🐼 国内直连 + 🍎 苹果服务 + 3 个控制组，共 15 组，全量 Orz-3/mini 彩色图标
 - **广告四道防线**：
-  1. DNS 域名拦截（199 条字节系广告 API 精准清单，commit SHA 锁版）
-  2. HTTPDNS 拦截（@commit 锁版，防绕过本地 DNS）
-  3. SDK 备用域兜底（@commit 锁版）
+  1. DNS 域名拦截（199 条字节系广告 API 精准清单，每日自动更新）
+  2. HTTPDNS 拦截（每周自动更新，防绕过本地 DNS）
+  3. SDK 备用域兜底（每周自动更新）
   4. gecko 广告运行时重写 + 全局丢 QUIC（封死广告视频本体）
 - **专项去广告**：红果短剧 / 番茄小说 8 秒插屏广告专项方案（基于上游作者实抓 HAR 的真实广告栈分析）
 - **已脱敏**：所有敏感值均为 `YOUR_*` 占位符，可安全 fork / 分发
@@ -84,7 +84,7 @@ https://raw.githubusercontent.com/chengaiying99-cmd/qx-personal-config/main/quan
 | `YOUR_CERTIFICATE_PASSWORD` | `[mitm]`（注释状态） | MITM 证书口令 |
 | `YOUR_P12_CERTIFICATE_CONTENT` | `[mitm]`（注释状态） | p12 证书 Base64 内容 |
 
-> 说明：红果去广告等订阅规则地址已填入真实值（指向本账号仓库，SHA 锁版），导入后即可正常拉取，无需修改。
+> 说明：红果去广告等订阅规则地址已填入真实值（指向本账号仓库），导入后即可正常拉取，无需修改。
 >
 > ⚠️ p12 证书与口令**不要经聊天/IM 传输**（会破坏 ASN.1 结构导致证书失效）。推荐在手机 QX 现用配置的 `[mitm]` 段直接复制这两行。
 
@@ -105,7 +105,7 @@ https://raw.githubusercontent.com/chengaiying99-cmd/qx-personal-config/main/quan
 
 - **MITM 证书**：`passphrase` 与 `p12` 是你的私钥，**绝不提交到任何仓库**
 - **订阅链接**：内含节点凭证，务必使用 HTTPS 端点
-- **供应链**：第三方规则均已 @commit 锁版或指向稳定分支
+- **供应链**：规则源指向各上游默认分支并定期自动更新（交付发布阶段已解除 commit 锁版，可正常跟随上游修改）
 - **QUIC 全局丢弃**：`udp_drop_list = 443, STUN, QUIC` 是广告封锁的一部分，若部分 QUIC 应用异常请自行取舍
 
 ## 规则来源与致谢
