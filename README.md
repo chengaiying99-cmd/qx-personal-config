@@ -74,8 +74,6 @@ https://raw.githubusercontent.com/chengaiying99-cmd/qx-personal-config/main/quan
 └── .gitattributes              # 锁定 *.conf/*.list 为 LF（防 CRLF 导致 QX 报错）
 ```
 
-> 红果规则同时在 [qx-hongguo-adblock](https://github.com/chengaiying99-cmd/qx-hongguo-adblock) 仓库托管，主配置以 commit SHA 锁版引用；本仓库内为同步副本。
-
 ## 使用方法
 
 ### 1. 替换占位符（共 3 处）
